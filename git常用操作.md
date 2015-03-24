@@ -1,15 +1,18 @@
 
 
 
-## git 命令大全
+## git 命令
 
 ##### 远程仓库的操作
 1. 添加远程仓库	
 	
 	`$git remote add [name] [url]`
+	
+	
 2. 修改远程仓库
 	
-	`$git remote set-url --push[name][newUrl]`·
+	`$git remote set-url --push[name][newUrl]`
+	
 3. 删除远程仓库
 
 	`$git remote rm [name]`
@@ -29,10 +32,17 @@
 
 	`$git remote add origin git@server-name:path/<remoteRepository>.git`
 	
+7. 查看远程相关信息
+
+	`$git remote -v`
+	
+
+	
 ##### 分支的操作
 1. 查看分支
 
 	`$git branch`
+	
 2. 查看远程分支
 
 	`$git branch -a`
@@ -79,8 +89,77 @@
 10. 同步本地远程分支
 
 	`$git checkout --track origin/develop`
+	
+##### 解决冲突
+
+1.	手动解决
+
+
+##### 版本比较
+1.	和当前库里最新的作比较
+
+	`$git diff HEAD -- #fileName#`
+	
+##### 版本撤销
+
+1.	没`git add .`之前
+
+	`$git checkout -- #file#`
+
+2. 撤销Commit 之前的操作
+
+	`git reset HEAD #fileName#`
+	
+##### 保存当前工作的更改
+1.	`$git stash`
+2.	列出保存的
+	`$git stash list`
+	32=-
+
+
+##### 版本回退
+先用Git Log 查看CommitID，根据Id做版本回退
+
+1.	回到当前版本（HEAD）的上一版本
+	`$git reset --hard HEAD^`		
+	
+	上上版本
+	
+	`$git reset --hard HEAD^^`
+	
+	上N个版本
+	
+	`$git reset --hard HEAD^~N`
+	
+
+2.	根据Commit ID 做回退
+	
+	`$git reset --hard #Commit id#`
+	
+3.	(往后回退了，又想往前回退)需要以前的Commit 记录
+
+	`$git reflog`
+
+
+##### 保存工作状态
+1.	保存
+	`$git stash`
+	
+2.	列表
+	`git stash list`
+	
+3.	恢复
+	`git stash apply`
+	
+4.	删除
+	`git stash drop`
+	
+5.	恢复并删除
+	`git stash pop`
+
 
 ##### 标签的操作
+
 1. 查看标签
 
 	 `$git tag`
@@ -117,9 +196,7 @@
 
 
 #####其它
-1. 查看远程相关信息
 
-	`$git remote -v`
 
 2.	酷炫的Git log 查看方式 [个性化你的Log](https://ruby-china.org/topics/939)
  	
@@ -138,7 +215,10 @@
 	[git last]查看看最后一次提交信息
 	
 	`$ git config --global alias.last 'log -1'`
+	
+3. 忽略某些文件 
 
+	GitHub已经为我们准备了各种配置文件[gitHub](https://github.com/github/gitignore)
 
 ##### 鸣谢
 
@@ -153,8 +233,12 @@
 
 ##### 注意事项
 
-1. 在操作员称仓库前请注意你是否具有某远程仓库的操作权限
-2. 在熟练使用前请不要在线上分支上做练习
+1.	你要知道，工作区，暂存区，和版本库
+	工作区修改文件后，通过`git add .`添加到暂存区，如果没有问题，则通过`git commit -m "#message#"`提交到版本库
+	
+2. 在操作员称仓库前请注意你是否具有某远程仓库的操作权限
+
+3. 在熟练使用前请不要在线上分支上做练习
 
 ##### The Last 
 
@@ -162,5 +246,5 @@
 
 * 传送门：[Mr.Yang@github](https://github.com/youran1024)
 
-2015 Copy right @Mr.Yang
+2015 Copy right @Mr.Yang  v1.0.0
 
