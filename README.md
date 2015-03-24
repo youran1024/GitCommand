@@ -18,7 +18,6 @@
 	`$git remote rm [name]`
 	
 4. 克隆远程仓库
-	(2种协议，一种是https协议, 一种是ssh协议)
 	
 	`$git clone https://github.com/youran1024/GitTest.git`
 	
@@ -50,6 +49,9 @@
 	`$git fetch`
 	
 11. 删除文件
+	`$git rm #file#`
+
+12. 
 	
 	
 ##### 分支的操作
@@ -107,6 +109,7 @@
 	git rebase <branchName> 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
 	
 	`$git rebase <branchName>`
+	
 	git rebase 的过程中会有冲突，冲突解决过后要用
 	
 	`$git rebase --continue`
@@ -124,7 +127,10 @@
 	
 ##### 解决冲突
 
-1.	手动解决
+1.	`$git merge`
+
+	`$git rebase`
+
 
 
 ##### 版本比较
@@ -142,9 +148,11 @@
 	
 	`$git checkout HEAD #file#`
 
-2. 撤销Commit 之前的操作
+2. 撤销Commit 之前的操作 (版本指针做了重新的指向)
+	如果是--hard 撤销的话，则存储区内没有变化
+	如果是--soft（默认），则存储区将commit id 之前所有的commit发生的变化，放到了存储区。 
 
-	`$git reset HEAD #fileName#`
+	`$git reset HEAD #commit id#`
 	
 	
 先用Git Log 查看CommitID，根据Id做版本回退
