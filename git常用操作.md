@@ -4,16 +4,16 @@
 ## git 命令
 
 ##### 远程仓库的操作
-1. 关联远程仓库	
+1. 添加远程仓库	
 	
 	`$git remote add [name] [url]`
 	
 	
-2. 修改关联仓库
+2. 修改远程仓库
 	
 	`$git remote set-url --push[name][newUrl]`
 	
-3. 删除关联仓库
+3. 删除远程仓库
 
 	`$git remote rm [name]`
 	
@@ -38,19 +38,15 @@
 	
 8. 提交修改
 
-	`$git push  #remote# #branch#`
+	`$git push`
 	
 9. 获取服务器上的最新版本，并自动合并
 
-	`$git pull #remote# #branch#`
-	
+	`$git pull`
 
-10. 获取服务器上的最新版本,不做合并
-
+10. 获取服务器上的最新版本
+11. 
 	`$git fetch`
-	
-11. 删除文件
-	
 	
 ##### 分支的操作
 1. 查看分支
@@ -68,10 +64,6 @@
 4. 建立本地分支和远程分支的关联
 
 	`$git branch --set-upstream <localBranch> origin/<remoteBranch>`
-	
-	本地的分支跟踪线上的分支
-	
-	`$git branch --track #newBranch# #remoteBranch#`
 
 3. 创建远程分支到本地
 
@@ -104,23 +96,9 @@
 
 	`$git merge <branchName>`
 	
-	git rebase <branchName> 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
-	
-	`$git rebase <branchName>`
-	git rebase 的过程中会有冲突，冲突解决过后要用
-	
-	`$git rebase --continue`
-	
 10. 同步本地远程分支
 
 	`$git checkout --track origin/develop`
-	
-11. 删除文件
-	`$git rm #file#`
-
-12. 添加文件
-	`$git add .`
-	
 	
 ##### 解决冲突
 
@@ -132,30 +110,27 @@
 
 	`$git diff HEAD -- #fileName#`
 	
-##### 撤销操作
+##### 版本撤销
 
 1.	没`git add .`之前
 
 	`$git checkout -- #file#`
-	
-	单独撤销某个文件的修改
-	
-	`$git checkout HEAD #file#`
 
 2. 撤销Commit 之前的操作
 
 	`git reset HEAD #fileName#`
 	
-	
+##### 保存当前工作的更改
+1.	`$git stash`
+2.	列出保存的
+	`$git stash list`
+	32=-
+
+
+##### 版本回退
 先用Git Log 查看CommitID，根据Id做版本回退
 
-1. ？？
-	`$git revert #commitid#`
-
 1.	回到当前版本（HEAD）的上一版本
-
-	--hard 撤销版本，不保留修改
-	
 	`$git reset --hard HEAD^`		
 	
 	上上版本
@@ -166,8 +141,6 @@
 	
 	`$git reset --hard HEAD^~N`
 	
-	撤销版本，并保留修改
-	`$git reset #commit id#`
 
 2.	根据Commit ID 做回退
 	
@@ -234,13 +207,7 @@
 
 #####其它
 
-1. 那个文件都发生过哪些变化
 
-	`$git log -p #file#`
-2. 看看那个文件被谁改变过
-	
-	`$git blame #file#`
-	
 2.	酷炫的Git log 查看方式 [个性化你的Log](https://ruby-china.org/topics/939)
  	
  	[1]
@@ -258,7 +225,6 @@
 	[git last]查看看最后一次提交信息
 	
 	`$ git config --global alias.last 'log -1'`
-	
 	
 3. 忽略某些文件 
 
@@ -285,8 +251,6 @@
 3. 在熟练使用前请不要在线上分支上做练习
 
 ##### The Last 
-
-有失误之处欢迎修改
 
 如果你需要补充这个文档，欢迎ForkMe并提交你的修改
 
