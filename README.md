@@ -134,7 +134,7 @@
 	
 ##### 撤销操作
 
-1.	没`git add .`之前
+1.	没`$git add .`之前
 
 	`$git checkout -- #file#`
 	
@@ -144,7 +144,7 @@
 
 2. 撤销Commit 之前的操作
 
-	`git reset HEAD #fileName#`
+	`$git reset HEAD #fileName#`
 	
 	
 先用Git Log 查看CommitID，根据Id做版本回退
@@ -183,16 +183,16 @@
 	`$git stash`
 	
 2.	列表
-	`git stash list`
+	`$git stash list`
 	
 3.	恢复
-	`git stash apply`
+	`$git stash apply`
 	
 4.	删除
-	`git stash drop`
+	`$git stash drop`
 	
 5.	恢复并删除
-	`git stash pop`
+	`$git stash pop`
 
 
 ##### 标签的操作
@@ -253,11 +253,11 @@
 
 	[git lg]显示图形化的Log
 	
-	`git config --global alias.lg "log --graph"`
+	`$git config --global alias.lg "log --graph"`
 
 	[git last]查看看最后一次提交信息
 	
-	`$ git config --global alias.last 'log -1'`
+	`$git config --global alias.last 'log -1'`
 	
 	
 3. 忽略某些文件 
