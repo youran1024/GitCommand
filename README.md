@@ -127,10 +127,11 @@
 	
 ##### 解决冲突
 
-1.	`$git merge`
-
+	`$git merge`
+	
+	git rebase <branchName> 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
+	
 	`$git rebase`
-
 
 ##### 版本比较
 1.	和当前库里最新的作比较
