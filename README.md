@@ -29,7 +29,7 @@
 
 6. 关联远程仓库 (创建好本地的仓库后，通过此命令跟远程仓库做关联)
 
-	`$git remote add origin git@server-name:path/<remoteRepository>.git`
+	`$git remote add origin git@server-name:path/#remoteRepository#.git`
 	
 7. 查看远程相关信息
 
@@ -65,11 +65,11 @@
 	
 3. 创建本地分支
 
-	`$git branch <newBranch>`
+	`$git branch #newBranch#`
 	
 4. 建立本地分支和远程分支的关联
 
-	`$git branch --set-upstream <localBranch> origin/<remoteBranch>`
+	`$git branch --set-upstream #localBranch# origin/#remoteBranch#`
 	
 	本地的分支跟踪线上的分支
 	
@@ -77,38 +77,38 @@
 
 3. 创建远程分支到本地
 
-	`$ git checkout -b <localBranch> origin/<remoteBranch>`
+	`$ git checkout -b #localBranch# origin/#remoteBranch#`
 	
 2. 创建分支 (把本地分支推送到远程，或者把本地的代码更新到远程对应的分支)
 
-	`$git push origin <localBranchName>`
+	`$git push origin #localBranchName#`
 
 3. 切换分支
 
-	`$git checkout <branchName>	`
+	`$git checkout #branchName#	`
 	
 4. 创建并切换分支
 
-	`$git checkout -b <branchName>`
+	`$git checkout -b #branchName#`
 
 5. 删除分支
 
-	`$git branch -d <branchName>`
+	`$git branch -d #branchName#`
 
 6. 强制删除分支（如果有没有提交的代码，需要强制删除，才能删掉分支，否则要首先撤掉修改过的代码）
 
-	`$git branch -D <branchName>`
+	`$git branch -D #branchName#`
 	
 6. 删除远程分支
 
-	`$git push origin --delete <remoteBranchName>`		
+	`$git push origin --delete #remoteBranchName#`		
 7. 合并其它分支到当前分支
 
-	`$git merge <branchName>`
+	`$git merge #branchName#`
 	
-	git rebase <branchName> 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
+	git rebase #branchName# 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
 	
-	`$git rebase <branchName>`
+	`$git rebase #branchName#`
 	
 	git rebase 的过程中会有冲突，冲突解决过后要用
 	
@@ -129,7 +129,7 @@
 
 	`$git merge`
 	
-	git rebase <branchName> 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
+	git rebase #branchName# 是把branch里的每一次提交生成一个补丁，然后跟当前的分支做合并。
 	
 	`$git rebase`
 
@@ -211,19 +211,19 @@
 	 
 2. 创建标签：
 
-	`$git tag <tagName>`
+	`$git tag #tagName#`
 	
 3. 创建标签并添加标签信息
 
-	`$git tag -a <tagname> -m "blablabla...`
+	`$git tag -a #tagname# -m "blablabla...`
 	
 4. 查看标签的信息
 
-	`$git show <tagName>`
+	`$git show #tagName#`
 
 5. 提交Tag到远程 (提交操作同分支)
 
-	`$git push origin <tagName>`
+	`$git push origin #tagName#`
 	
 6. 提交本地所有的Tag (提交本地所有的分支那？？)
 
@@ -232,11 +232,11 @@
 
 6. 删除标签
 
-	`$git tag -d <tagName>`
+	`$git tag -d #tagName#`
 
 7. 删除远程tag
 	
-	`$git push origin :refs/tags/<tagname>`
+	`$git push origin :refs/tags/#tagname#`
 
 
 
@@ -255,7 +255,7 @@
  	`git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative`
  	
  	[2]
- 	`git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+ 	`git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)#%an#%Creset' --abbrev-commit"`
  
 3.	git 配置别名 (以后可以用 git lg 代替 git log --graph)
 
@@ -278,7 +278,7 @@
 
 * 传送门：[biu ~](https://ruby-china.org/topics/939)
 
-关于git的详细介绍请参照<RED>廖雪峰</RED>老师的讲解。
+关于git的详细介绍请参照#RED#廖雪峰#/RED#老师的讲解。
 
 * 传送门：[biu ~](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * 传送门（远程操作篇）：[biu ~](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
