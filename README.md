@@ -152,13 +152,13 @@
 
 	`$git reset HEAD #commit id#`
 	
-	
-先用Git Log 查看CommitID，根据Id做版本回退
+	先用Git Log 查看CommitID，根据Id做版本回退
 
-1. ？？
+3. 撤销某个版本，但不影响其它的版本
+
 	`$git revert #commitid#`
 
-1.	回到当前版本（HEAD）的上一版本
+4.	回到当前版本（HEAD）的上一版本
 
 	--hard 撤销版本，不保留修改
 	
@@ -173,13 +173,19 @@
 	`$git reset --hard HEAD^~N`
 	
 	撤销版本，并保留修改
+	
 	`$git reset #commit id#`
 
-2.	根据Commit ID 做回退
+5.	根据Commit ID 做回退
 	
 	`$git reset --hard #Commit id#`
 	
-3.	(往后回退了，又想往前回退)需要以前的Commit 记录
+6.	回退到某个版本，并保留当前的修改
+
+	`$git reset --keep #commit id#`
+	
+
+6.	(往后回退了，又想往前回退)需要以前的Commit 记录
 
 	`$git reflog`
 
