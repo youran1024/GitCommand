@@ -35,6 +35,14 @@
 
 	`$git remote -v`
 	
+8.	查看本地分支对应的远程分支
+	
+	`$git branch -vv`
+	
+9.	产看系统配置的文件
+
+	`$git config --list`
+	
 8. 提交修改
 
 	`$git push  #remote# #branch#`
@@ -42,7 +50,6 @@
 9. 获取服务器上的最新版本，并自动合并
 
 	`$git pull #remote# #branch#`
-	
 
 10. 获取服务器上的最新版本,不做合并
 
@@ -50,9 +57,9 @@
 	
 11. 删除文件
 	`$git rm #file#`
-	
-	
-##### 分支的操作
+
+
+#### 分支的操作
 1. 查看分支
 
 	`$git branch`
