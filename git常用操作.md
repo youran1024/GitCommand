@@ -45,7 +45,7 @@
 	`$git pull`
 
 10. 获取服务器上的最新版本
-11. 
+ 
 	`$git fetch`
 	
 ##### 分支的操作
@@ -119,12 +119,6 @@
 2. 撤销Commit 之前的操作
 
 	`git reset HEAD #fileName#`
-	
-##### 保存当前工作的更改
-1.	`$git stash`
-2.	列出保存的
-	`$git stash list`
-	32=-
 
 
 ##### 版本回退

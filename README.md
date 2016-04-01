@@ -251,16 +251,25 @@
 
 
 
-#####其它
+#####查看历史
 
 1. 那个文件都发生过哪些变化
 
 	`$git log -p #file#`
-2. 看看那个文件被谁改变过
+	
+2. 查看最近两次的更新内容
+	
+	`$git log -p -2`
+	
+3. 产看某次提交Commit的内容
+
+	`$git show #commit-hash-id#`
+
+4. 看看那个文件被谁改变过
 	
 	`$git blame #file#`
 	
-2.	酷炫的Git log 查看方式 [个性化你的Log](https://ruby-china.org/topics/939)
+5.	酷炫的Git log 查看方式 [个性化你的Log](https://ruby-china.org/topics/939)
  	
  	[1]
  	`git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative`
@@ -268,7 +277,9 @@
  	[2]
  	`git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)#%an#%Creset' --abbrev-commit"`
  
-3.	git 配置别名 (以后可以用 git lg 代替 git log --graph)
+#####其它
+ 
+1.	git 配置别名 (以后可以用 git lg 代替 git log --graph)
 
 	[git lg]显示图形化的Log
 	
@@ -279,7 +290,7 @@
 	`$git config --global alias.last 'log -1'`
 	
 	
-3. 忽略某些文件 
+2. 忽略某些文件 
 
 	GitHub已经为我们准备了各种配置文件[gitHub](https://github.com/github/gitignore)
 
@@ -311,5 +322,5 @@
 
 * 传送门：[Mr.Yang@github](https://github.com/youran1024)
 
-2015 Copy right @Mr.Yang  v1.0.0
+2015 Copy right @Mr.Yang  v1.0.1
 

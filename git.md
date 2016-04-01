@@ -91,6 +91,23 @@
 
 	`$git checkout --track origin/develop`
 	
+11. *添加某个分支的某个Commit*
+	
+	` git cherry-pick 99daed2`
+	
+	通过cherry-pick 命令取出某个CommitID， 然后同步到某个分支上
+	
+12. *合并分支，但是不合并分支上的Commit*
+
+	`$ git merge --squash #branch#`
+	branch 上的修改会被当成当前分支的新的修改，然后在当前分支上重新Commit一下。
+	
+13. 通过补丁的方式，执行合并， 可以去掉冗杂的Commit。
+	` $ git rebase #branch#`
+	碰到冲突后，修改冲突
+	`$ git rebase --continue`
+	
+
 ##### 解决冲突
 
 1.	手动解决
@@ -115,7 +132,6 @@
 1.	`$git stash`
 2.	列出保存的
 	`$git stash list`
-	32=-
 
 
 ##### 版本回退
