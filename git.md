@@ -106,7 +106,9 @@
 	` $ git rebase #branch#`
 	碰到冲突后，修改冲突
 	`$ git rebase --continue`
+	  
 	
+14. 
 
 ##### 解决冲突
 
