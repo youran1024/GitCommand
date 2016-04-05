@@ -104,9 +104,11 @@
 	
 13. 通过补丁的方式，执行合并， 可以去掉冗杂的Commit。
 	` $ git rebase #branch#`
+	
 	碰到冲突后，修改冲突
 	`$ git rebase --continue`
-	  
+	终止
+	`$ git abort`
 	
 14. 
 
