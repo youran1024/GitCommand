@@ -249,6 +249,8 @@
 
 * 传送门：[biu ~](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 * 传送门（远程操作篇）：[biu ~](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+* GitBook1[biu ~](http://gitbook.liuhui998.com/index.html)
+* GitBook2[biu ~](https://git-scm.com/book/zh/v2/)
 
 ##### 注意事项
 
