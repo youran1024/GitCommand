@@ -93,21 +93,28 @@
 	
 11. *添加某个分支的某个Commit*
 	
-	` git cherry-pick 99daed2`
+	` git cherry-pick #commitID#`
 	
 	通过cherry-pick 命令取出某个CommitID， 然后同步到某个分支上
 	
 12. *合并分支，但是不合并分支上的Commit*
 
 	`$ git merge --squash #branch#`
-	branch 上的修改会被当成当前分支的新的修改，然后在当前分支上重新Commit一下。
 	
-13. 通过补丁的方式，执行合并， 可以去掉冗杂的Commit。
+	 #branch#上的Commits 会被当成一个 修改 提交到#当前分支#， 但并没有Commit，所以完成后需要Commit 一下
+	
+13. 通过补丁的方式，执行合并。[详解](http://gitbook.liuhui998.com/4_2.html)
+
+	首先把分支里的每个提交(commit)取消掉，然后把它们临时保存为补丁(patch)(这些补丁放到".git/rebase"目录	中),最后把#当前分支#更新到最新的#branch#分支，最后把保存的这些补丁应用到#当前分支#分支上
+	
 	` $ git rebase #branch#`
 	
 	碰到冲突后，修改冲突
+	
 	`$ git rebase --continue`
+	
 	终止
+	
 	`$ git abort`
 	
 14. 
@@ -213,6 +220,10 @@
 7. 删除远程tag
 	
 	`$git push origin :refs/tags/<tagname>`
+
+8. 获取标签
+
+	`￥git checkout -b #newbranch# #tag#`
 
 
 
